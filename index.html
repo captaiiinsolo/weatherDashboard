@@ -11,6 +11,8 @@
     <!-- jQuery UI -->
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
 
+    <title>Weather Dashboard</title>
+
 </head>
 <body>
 
@@ -27,10 +29,10 @@
                     <div class="field">
                         <label for="" class="label">Search for a City</label>
                         <div class="control">
-                            <input type="text" class="input" placeholder="Enter City Here">
+                            <input id="userCitySearch" type="text" class="input" placeholder="Enter City Here">
                         </div>
-                        <div class="mt-2">
-                            <input type="submit" class="button is-info is-fullwidth" value="Search">
+                        <div class="mt-4">
+                            <input id="searchBtn" class="button is-info is-fullwidth" value="Search">
                         </div>
                     </div>
                 </form>
@@ -45,9 +47,15 @@
             </div>
 
             <div class="column">
-                <div class="container has-text-centered">
-                    <div class="box">
-                        <h1 class="title">Current Days Forecast Shows up in this container</h1>
+                <div class="container has-text-left">
+                    <div id="currentWeather" class="box">
+                        <p class="title">Current Days Forecast Shows up in this container</p>
+
+                        <div class="columns">
+                            <div id="fiveDayWeather" class="column">
+                                <p class="title">5 Day Forecast Goes here</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

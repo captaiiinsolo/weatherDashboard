@@ -26,7 +26,7 @@ $("#searchBtn").on("click", function(event) {
 
 
         
-        $("#cityWeather").append(response.main.temp);
+        $("#cityWeather").append(response.main.temp + ", " + response.weather[0].main);
     });
 
     // Conditional statement for user input

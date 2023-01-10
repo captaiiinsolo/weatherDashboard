@@ -1,13 +1,16 @@
-var currentWeather = document.getElementById('currentWeather');
-var fiveDayWeather = document.getElementById('fiveDayWeather');
-var userCitySearch = document.getElementById('userCitySearch');
+var cities = [];
 
-var APIKey = "13153e6b745e46bb88f837dd42f2883c";
+$("#searchBtn").on("click", function(event) {
+    event.preventDefault();
 
-var query = "api.openweathermap.org/data/2.5/forecast?q=" + userCitySearch + "&appid=" + APIKey;
+    var userInput = $("#userInput").val();
 
+    if (userInput == null || userInput == "") {
+        console.log("This was empty");
+    } else {
+    
+        $("#cityBtnGroup").append("<button class='button is-success is-fullwidth recentCity'>" + userInput + "</button>");
 
-// Event listener on the 
-$('#searchBtn').on('click', function() {
-    console.log('Search Button Event Listener');
+    }
+
 });

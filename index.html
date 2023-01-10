@@ -25,22 +25,21 @@
     <section class="m-6">
         <div class="columns">
             <div class="column is-one-third">
-                <form action="" class="box">
+                <form id="userCitySearch" action="" class="box">
                     <div class="field">
-                        <label for="" class="label">Search for a City</label>
+                        <label class="label">Search for a City</label>
                         <div class="control">
-                            <input id="userCitySearch" type="text" class="input" placeholder="Enter City Here">
+                            <input id="userInput" type="text" class="input" placeholder="Enter City Here">
                         </div>
                         <div class="mt-4">
-                            <input id="searchBtn" class="button is-info is-fullwidth" value="Search">
+                            <button id="searchBtn" class="button is-info is-fullwidth">Search</button>
                         </div>
                     </div>
                 </form>
                 <div class="columns mt-5">
                     <div class="column">
                         <p class="subtitle">Previously Searched Cities:</p>
-                        <div class="buttons are-medium">
-                            <button class="button is-fullwidth is-success">San Clemente</button>
+                        <div id="cityBtnGroup" class="buttons are-medium">
                         </div>
                     </div>
                 </div>
@@ -49,11 +48,11 @@
             <div class="column">
                 <div class="container has-text-left">
                     <div id="currentWeather" class="box">
-                        <p class="title">Current Days Forecast Shows up in this container</p>
+                        <p id="selectedCity" class="title"></p>
 
                         <div class="columns">
                             <div id="fiveDayWeather" class="column">
-                                <p class="title">5 Day Forecast Goes here</p>
+                                <p class="title"></p>
                             </div>
                         </div>
                     </div>

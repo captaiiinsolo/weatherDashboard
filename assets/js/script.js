@@ -49,7 +49,7 @@ function get5DayForecast(response) {
 
         // Grabs icon code and insets into url
         var iconCode = response.list[0].weather[0].icon;
-        var iconURL = "http://openweathermap.org/img/wn/" + iconCode + "@2x.png";
+        var iconURL = "https://openweathermap.org/img/wn/" + iconCode + "@2x.png";
 
         // Empties title in selectedCity container
         $("#selectedCity").empty();
@@ -73,10 +73,10 @@ function get5DayForecast(response) {
         $("#5DayTitle").removeClass("is-hidden")
         $("div").removeClass("is-hidden");
 
-        // Appends weather to corresponding days
+        // Appends weather and weather info to corresponding days
         // Day 1
         var day1Icon = response.list[1].weather[0].icon;
-        var day1IconURL = "http://openweathermap.org/img/wn/" + day1Icon + "@2x.png";
+        var day1IconURL = "https://openweathermap.org/img/wn/" + day1Icon + "@2x.png";
         var convertTime1 = response.list[1].dt;
         var day1Dt = dayjs.unix(convertTime1).format("MM/DD");
     
@@ -89,7 +89,7 @@ function get5DayForecast(response) {
         
         // Day 2
         var day2Icon = response.list[9].weather[0].icon;
-        var day2IconURL = "http://openweathermap.org/img/wn/" + day2Icon + "@2x.png";
+        var day2IconURL = "https://openweathermap.org/img/wn/" + day2Icon + "@2x.png";
         var convertTime2 = response.list[9].dt;
         var day2Dt = dayjs.unix(convertTime2).format("MM/DD");
 
@@ -102,7 +102,7 @@ function get5DayForecast(response) {
 
         // Day 3
         var day3Icon = response.list[17].weather[0].icon;
-        var day3IconURL = "http://openweathermap.org/img/wn/" + day3Icon + "@2x.png";
+        var day3IconURL = "https://openweathermap.org/img/wn/" + day3Icon + "@2x.png";
         var convertTime3 = response.list[17].dt;
         var day3Dt = dayjs.unix(convertTime3).format("MM/DD");
 
@@ -115,7 +115,7 @@ function get5DayForecast(response) {
 
         // Day 4
         var day4Icon = response.list[25].weather[0].icon;
-        var day4IconURL = "http://openweathermap.org/img/wn/" + day4Icon + "@2x.png";
+        var day4IconURL = "https://openweathermap.org/img/wn/" + day4Icon + "@2x.png";
         var convertTime4 = response.list[25].dt;
         var day4Dt = dayjs.unix(convertTime4).format("MM/DD");
 
@@ -128,7 +128,7 @@ function get5DayForecast(response) {
 
         // Day 5
         var day5Icon = response.list[33].weather[0].icon;
-        var day5IconURL = "http://openweathermap.org/img/wn/" + day5Icon + "@2x.png";
+        var day5IconURL = "https://openweathermap.org/img/wn/" + day5Icon + "@2x.png";
         var convertTime5 = response.list[33].dt;
         var day5Dt = dayjs.unix(convertTime5).format("MM/DD");
 

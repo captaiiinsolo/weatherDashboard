@@ -64,7 +64,7 @@ function get5DayForecast(response) {
         $("#weatherIcon").attr('src', iconURL);
 
         // Appends main weather temp and description to subtitle
-        $("#cityWeather").append(response.list[0].main.temp + ", " + response.list[0].weather[0].description);
+        $("#cityWeather").append("Temp: " + response.list[0].main.temp + " °F" +", " + response.list[0].weather[0].description);
 
         // Appends searched city to cityBtnGroup
         $("#cityBtnGroup").append("<button class='button is-success is-fullwidth recentCity'>" + response.city.name + "</button>");
@@ -79,7 +79,7 @@ function get5DayForecast(response) {
         var day1IconURL = "http://openweathermap.org/img/wn/" + day1Icon + "@2x.png";
     
         $("#day1").empty();
-        $("#day1").append(response.list[1].main.temp);
+        $("#day1").append(response.list[1].main.temp + " °F");
         $("#day1WeatherIcon").removeClass("is-hidden");
         $("#day1WeatherIcon").attr('src', day1IconURL);
         
@@ -88,7 +88,7 @@ function get5DayForecast(response) {
         var day2IconURL = "http://openweathermap.org/img/wn/" + day2Icon + "@2x.png";
 
         $("#day2").empty();
-        $("#day2").append(response.list[9].main.temp);
+        $("#day2").append(response.list[9].main.temp + " °F");
         $("#day2WeatherIcon").removeClass("is-hidden");
         $("#day2WeatherIcon").attr('src', day2IconURL);
 
@@ -97,7 +97,7 @@ function get5DayForecast(response) {
         var day3IconURL = "http://openweathermap.org/img/wn/" + day3Icon + "@2x.png";
 
         $("#day3").empty();
-        $("#day3").append(response.list[17].main.temp);
+        $("#day3").append(response.list[17].main.temp + " °F");
         $("#day3WeatherIcon").removeClass("is-hidden");
         $("#day3WeatherIcon").attr('src', day3IconURL);
 
@@ -106,7 +106,7 @@ function get5DayForecast(response) {
         var day4IconURL = "http://openweathermap.org/img/wn/" + day4Icon + "@2x.png";
 
         $("#day4").empty();
-        $("#day4").append(response.list[25].main.temp);
+        $("#day4").append(response.list[25].main.temp + " °F");
         $("#day4WeatherIcon").removeClass("is-hidden");
         $("#day4WeatherIcon").attr('src', day4IconURL);
 
@@ -115,7 +115,7 @@ function get5DayForecast(response) {
         var day5IconURL = "http://openweathermap.org/img/wn/" + day5Icon + "@2x.png";
 
         $("#day5").empty();
-        $("#day5").append(response.list[33].main.temp);
+        $("#day5").append(response.list[33].main.temp + " °F");
         $("#day5WeatherIcon").removeClass("is-hidden");
         $("#day5WeatherIcon").attr('src', day5IconURL);
 
@@ -130,7 +130,3 @@ $("#searchBtn").on("click", function(event) {
     getGeo();
 
 });
-
-
-
-

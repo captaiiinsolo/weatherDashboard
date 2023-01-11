@@ -48,7 +48,9 @@
             <div class="column">
                 <div class="container has-text-left">
                     <div id="currentWeather" class="box">
-                        <p id="selectedCity" class="title"></p>
+                        <p id="selectedCity" class="title">
+                            <div id="icon"><img id="weatherIcon" class="is-hidden" src="" alt="Weather icon"></div>
+                        </p>
                         <p id="cityWeather" class="subtitle"></p>
 
                         <div class="columns">
@@ -58,29 +60,49 @@
                         </div>
 
                         <div class="columns">
-                            <div class="column is-one-fifth">
+                            <div class="column is-one-fifth has-text-centered">
                                 <div class="box is-hidden">
-                                    <p id="day1" class="title"></p>
+                                    <p id="day1" class="title">
+                                        <div>
+                                            <img id="day1WeatherIcon" class="is-hidden" src="" alt="Weather Icon">
+                                        </div>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="column is-one-fifth">
+                            <div class="column is-one-fifth has-text-centered">
                                 <div class="box is-hidden">
-                                    <p id="day2" class="title"></p>
+                                    <p id="day2" class="title">
+                                        <div>
+                                            <img id="day2WeatherIcon" src="" alt="Weather Icon">
+                                        </div>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="column is-one-fifth">
+                            <div class="column is-one-fifth has-text-centered">
                                 <div class="box is-hidden">
-                                    <p id="day3" class="title"></p>
+                                    <p id="day3" class="title">
+                                        <div>
+                                            <img id="day3WeatherIcon" src="" alt="Weather Icon">
+                                        </div>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="column is-one-fifth">
+                            <div class="column is-one-fifth has-text-centered">
                                 <div class="box is-hidden">
-                                    <p id="day4" class="title"></p>
+                                    <p id="day4" class="title">
+                                        <div>
+                                            <img id="day4WeatherIcon" src="" alt="Weather Icon">
+                                        </div>
+                                    </p>
                                 </div>
                             </div>
-                            <div class="column is-one-fifth">
-                                <div class="box is-hidden">
-                                    <p id="day5" class="title"></p>
+                            <div class="column is-one-fifth has-text-centered">
+                                <div class="box is-hidden has">
+                                    <p id="day5" class="title">
+                                        <div>
+                                            <img id="day5WeatherIcon" src="" alt="Weather Icon">
+                                        </div>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -101,6 +123,9 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" 
     integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" 
     crossorigin="anonymous"></script>
+
+    <!-- Day.js -->
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
     
     <!-- Personal JS -->
     <script src="./assets/js/script.js"></script>

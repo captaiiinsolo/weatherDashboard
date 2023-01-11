@@ -29,7 +29,7 @@
                     <div class="field">
                         <label class="label">Search for a City</label>
                         <div class="control">
-                            <input id="userInput" type="text" class="input" placeholder="Enter City Here">
+                            <input id="userInput" type="text" class="input" placeholder="San Clemente">
                         </div>
                         <div class="mt-4">
                             <button id="searchBtn" class="button is-info is-fullwidth">Search</button>
@@ -52,8 +52,36 @@
                         <p id="cityWeather" class="subtitle"></p>
 
                         <div class="columns">
-                            <div id="fiveDayWeather" class="column">
-                                <p class="title"></p>
+                            <div class="column is-fullwidth has-text-left">
+                                <p id="5DayTitle" class="title is-hidden">5 Day Forecast</p>
+                            </div>
+                        </div>
+
+                        <div class="columns">
+                            <div class="column is-one-fifth">
+                                <div class="box is-hidden">
+                                    <p id="day1" class="title"></p>
+                                </div>
+                            </div>
+                            <div class="column is-one-fifth">
+                                <div class="box is-hidden">
+                                    <p id="day2" class="title"></p>
+                                </div>
+                            </div>
+                            <div class="column is-one-fifth">
+                                <div class="box is-hidden">
+                                    <p id="day3" class="title"></p>
+                                </div>
+                            </div>
+                            <div class="column is-one-fifth">
+                                <div class="box is-hidden">
+                                    <p id="day4" class="title"></p>
+                                </div>
+                            </div>
+                            <div class="column is-one-fifth">
+                                <div class="box is-hidden">
+                                    <p id="day5" class="title"></p>
+                                </div>
                             </div>
                         </div>
                     </div>

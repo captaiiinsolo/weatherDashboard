@@ -2,7 +2,7 @@
 // AJAX Call to Geocoding API
 function getGeo() {
     var userCity = $("#userInput").val();
-    var countryCode = "USA"
+    var countryCode = "US"
     var APIKey = "13153e6b745e46bb88f837dd42f2883c";
     var geoURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + userCity + "," + countryCode + "&limit=1" + "&appid=" + APIKey;
 
@@ -65,6 +65,9 @@ function get5DayForecast(response) {
 
         // Appends main weather temp and description to subtitle
         $("#cityWeather").append("Temp: " + response.list[0].main.temp + " °F" +", " + response.list[0].weather[0].description);
+        $("#humidity").append("Humidity: " + response.list[0].main.humidity + "%");
+        $("#wind").append("Wind: " + response.list[0].wind.speed + "mph");
+
 
         // Appends searched city to cityBtnGroup
         $("#cityBtnGroup").append("<button class='button is-success is-fullwidth recentCity'>" + response.city.name + "</button>");
@@ -82,10 +85,15 @@ function get5DayForecast(response) {
     
         $("#day1").empty();
         $("#day1Dt").empty();
+        $("#day1Humidity").empty();
+        $("#day1Wind").empty();
         $("#day1").append(response.list[6].main.temp + " °F");
         $("#day1Dt").append(day1Dt);
         $("#day1WeatherIcon").removeClass("is-hidden");
         $("#day1WeatherIcon").attr('src', day1IconURL);
+        $("#day1Humidity").append("Humidity: " + response.list[6].main.humidity + "%");
+        $("#day1Wind").append("Wind: " + response.list[6].wind.speed + "mph");
+
         
         // Day 2
         var day2Icon = response.list[14].weather[0].icon;
@@ -95,10 +103,14 @@ function get5DayForecast(response) {
 
         $("#day2").empty();
         $("#day2Dt").empty();
+        $("#day2Humidity").empty();
+        $("#day2Wind").empty();
         $("#day2Dt").append(day2Dt);
         $("#day2").append(response.list[14].main.temp + " °F");
         $("#day2WeatherIcon").removeClass("is-hidden");
         $("#day2WeatherIcon").attr('src', day2IconURL);
+        $("#day2Humidity").append("Humidity: " + response.list[14].main.humidity + "%");
+        $("#day2Wind").append("Wind: " + response.list[14].wind.speed + "mph");
 
         // Day 3
         var day3Icon = response.list[22].weather[0].icon;
@@ -108,10 +120,14 @@ function get5DayForecast(response) {
 
         $("#day3").empty();
         $("#day3Dt").empty();
+        $("#day3Humidity").empty();
+        $("#day3Wind").empty();
         $("#day3Dt").append(day3Dt);
         $("#day3").append(response.list[22].main.temp + " °F");
         $("#day3WeatherIcon").removeClass("is-hidden");
         $("#day3WeatherIcon").attr('src', day3IconURL);
+        $("#day3Humidity").append("Humidity: " + response.list[22].main.humidity + "%");
+        $("#day3Wind").append("Wind: " + response.list[22].wind.speed + "mph");
 
         // Day 4
         var day4Icon = response.list[30].weather[0].icon;
@@ -121,10 +137,14 @@ function get5DayForecast(response) {
 
         $("#day4").empty();
         $("#day4Dt").empty();
+        $("#day4Humidity").empty();
+        $("#day4Wind").empty();
         $("#day4Dt").append(day4Dt);
         $("#day4").append(response.list[30].main.temp + " °F");
         $("#day4WeatherIcon").removeClass("is-hidden");
         $("#day4WeatherIcon").attr('src', day4IconURL);
+        $("#day4Humidity").append("Humidity: " + response.list[30].main.humidity + "%");
+        $("#day4Wind").append("Wind: " + response.list[30].wind.speed + "mph");
 
         // Day 5
         var day5Icon = response.list[38].weather[0].icon;
@@ -134,10 +154,14 @@ function get5DayForecast(response) {
 
         $("#day5").empty();
         $("#day5Dt").empty();
+        $("#day5Humidity").empty();
+        $("#day5Wind").empty();
         $("#day5Dt").append(day5Dt);
         $("#day5").append(response.list[38].main.temp + " °F");
         $("#day5WeatherIcon").removeClass("is-hidden");
         $("#day5WeatherIcon").attr('src', day5IconURL);
+        $("#day5Humidity").append("Humidity: " + response.list[38].main.humidity + "%");
+        $("#day5Wind").append("Wind: " + response.list[38].wind.speed + "mph");
 
     });
 

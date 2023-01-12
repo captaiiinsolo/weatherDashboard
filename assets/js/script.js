@@ -55,6 +55,8 @@ function get5DayForecast(response) {
         $("#selectedCity").empty();
 
         $("#cityWeather").empty();
+        $("#humidity").empty();
+        $("#wind").empty();
 
         // Appends searched city to selectedCity title
         $("#selectedCity").append(response.city.name + " " + dayjs().format("MM/DD/YYYY"));
